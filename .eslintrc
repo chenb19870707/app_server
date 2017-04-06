@@ -1,0 +1,49 @@
+env:
+  node: true
+  es6: true
+
+parser: babel-eslint
+
+globals:
+  _: true
+  moment: true
+  configs: true
+  constants: true
+  assert: true
+  iconv: true
+  co: true
+  uuid: true
+  request: true
+  crypto: true
+  jwt: true
+  authorize: true
+  log4js: true
+  LOG: true
+  catchException: true
+  bodyParser: true
+  cookieParser: true
+  express: true
+  path: true
+  uploader: true
+  ERRORS: true
+  DB: true
+  sql: true
+  Upyun: true
+  Area: true
+  User: true
+  Team: true
+  Timer: true
+  CSV: true
+  Departments:true
+
+rules:
+  no-var: 2
+  no-unused-vars: 2
+  no-redeclare: 2
+  no-undef: 2
+
+  space-before-blocks: 2
+  no-mixed-spaces-and-tabs: 2
+  indent: [error, 2]
+  semi-spacing: [2, { before: false, after: true }]
+  quotes: [2, single]

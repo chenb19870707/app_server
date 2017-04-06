@@ -1,0 +1,31 @@
+apps:
+  - name: app_server_dev
+    script: bin/server.js
+    watch: [bin/server.js]
+    max_restarts: 1
+    env:
+      NODE_ENV: development
+      PORT: 6001
+
+  - name: app_server_pre
+    script: bin/server.js
+    watch: [bin/server.js]
+    env:
+      NODE_ENV: prerelease
+      PORT: 6001
+
+  - name: app_server_pro
+    script: bin/server.js
+    watch: [bin/server.js]
+    env:
+      NODE_ENV: production
+      PORT: 6001
+
+deploy:
+  production:
+    user: root
+    host: ["10.6.26.166", "10.6.27.211"]
+    ref: origin/production
+    repo: git@prod.oschina.net:onionkings/app_server.git
+    path: /www/thirdparty
+    post-deploy: npm install && make pro

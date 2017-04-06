@@ -1,0 +1,8 @@
+{
+  "presets": ["stage-3"],
+  "plugins": [
+    "transform-es2015-modules-commonjs",
+    "transform-async-to-generator",
+    ["transform-object-rest-spread", { "useBuiltIns": true }]
+  ]
+}

@@ -1,0 +1,6 @@
+node_modules
+logs/*.log*
+bin/server.js
+bin/server.js.map
+ .idea/workspace.xml
+.vscode
